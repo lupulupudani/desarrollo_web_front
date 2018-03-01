@@ -1,2 +1,2 @@
 # desarrollo_web_front
-Front ejercicios del curso frontend 2018
+Front ejercicios del curso frontend tajamar 2018
