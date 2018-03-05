@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-png">
+        <title>Almeria</title>
+    </head>
+    <body>
+        <!--El elemento de HTML Header (<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones de encabezados, una formulario de búsqueda o cosas parecidas.-->
+        <header>
+            <h1>La ciudad de Almeria</h1>
+            <p>La ciudad mas bonita del Sur</p>
+        </header>
+
+        <!--Crea un menu de navegacion-->
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li><a href="http://www3.aytoalmeria.es/db/www.nsf/home-www">Ayuntamiento</a></li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+
+        <!--El elemento HTML <main>  representa el contenido principal del <body> de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).-->
+        <main>
+
+            <!--El Elemento article de HTML (<article>) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la sindicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.-->
+            <article>
+                <img src="./images/puerto_almeria.jpg" alt="Imagen del puerto de Almeria">
+                <p><strong>Almería</strong>, es un municipio español y una ciudad, capital del mismo y de la provincia homónima, que pertenecen a la comunidad autónoma de <a href="http://www.andalucia.org/es/">Andalucía</a>.</p>
+
+                <p>Es el centro neurálgico de la <strong>Comarca Metropolitana de Almería</strong>, en el extremo sureste de la Península Ibérica y de la comarca turística de Almería-Cabo de Gata-Níjar.</p>
+                <p>La rodean por el oeste la sierra de Gádor, por el norte Sierra Alhamilla y por el este el valle y delta del río Andarax y, más allá, una llanura que culmina en la sierra de Cabo de Gata. Al sur, su puerto y litoral se abren a una amplia bahía sobre el mar Mediterráneo</p>
+                <p>Fue fundada por Abderramán III en un emplazamiento dominado anteriormente por otras urbes como la ibera Urci o la romana Portus Magnus y desempeñó un papel fundamental durante el califato de Córdoba, llegando a ser el puerto más importante del <em>al-Ándalus omeya</em>. Alcanzó su máximo esplendor durante la taifa, en el siglo XI, convirtiéndose bajo el reinado de Almotacín en un emporio comercial y cultural.</p>
+                <hr>
+
+                <!--El elemento de HTML section (<section>) representa una sección genérica de un documento. Sirve para determinar qué contenido corresponde a qué parte de un esquema. Piensa en el esquema como en el índice de contenido de un libro; un tema común y subsecciones relacionadas.  Es, por lo tanto, una etiquéta semántica. Su funcionalidad principal es estructurar semánticamente un documento a la hora de ser representado por parte de un agente usuario. Por ejemplo, un agente de usuario que represente el documento en voz, podría exponer al usuario el índice de contenido por niveles para navegar rápidamente por las distintas partes.-->
+                <section>
+                    <h2>Ciudades pertenecientes al municipio de Almeria</h2>
+                    <ul>
+                        <li>Níjar</li>
+                        <li><a href="https://es.wikipedia.org/wiki/Roquetas_de_Mar">Roquetas de Mar</a></li>
+                        <li>Santa Fe de Mondújar</li>
+                        <li>Purchena</li>
+                        <li>Turrillas</li>
+                        <li>Pechina</li>
+                        <li>etc</li>
+                    </ul>   
+                </section>
+                <div>
+                    <p>Tras su incorporación a la <em>Corona de Castilla</em> en 1489, la población fue diezmada por terremotos, plagas e incursiones de los piratas. La recuperación no fue patente hasta finales del siglo XIX, con el resurgir de la minería y la exportación de la uva de Ohanes, y de nuevo a partir de los años 1960, gracias a la explosión de la agricultura intensiva, el turismo, la construcción y la industria del mármol</p>
+                    <p>Entre su patrimonio histórico-artístico, cabe destacar la Alcazaba musulmana (siglos X a XV), la catedral-fortaleza de la Encarnación (siglo XVI), el cargadero de mineral o Cable Inglés (finales del siglo XIX), y el Museo de Almería, reinaugurado en 2006</p>
+                </div>
+            </article>          
+        </main>
+
+        <!--El Elemento HTML Aside (<aside>) representa una sección de una página que consiste en contenido que está tangencialmente relacionado con el contenido que le rodea, que podría ser considerado independiente de ese contenido. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.-->
+        <aside>
+            <p>Noticias</p>
+            <ul>
+                <li><a href="http://www3.aytoalmeria.es/db/www.nsf/0/5C9DDEDE5DDC0F4EC1258247004DE70B">Los senderistas explorarán con el PMD las Minas de Castala y Lavaderos de Segundo</a></li>
+                <li><a href="http://www3.aytoalmeria.es/db/www.nsf/0/CE10C743938FF53FC1258247004D31F6">La obra ‘Mujeres de la Chanca’ llega mañana martes al Teatro Apolo</a></li>
+            </ul>
+        </aside>
+
+        <!--El Elemento HTML Footer (<footer>) representa un pie de página para el contenido de sección más cercano o el elemento  raíz de sección (p.e, su ancestro mas cercano <article>, <aside>, <nav>, <section>,<blockquote>, <body>, <details>, <fieldset>, <figure>, <td>). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.-->
+        <footer>
+            <p>Daniel Lupu - Tajamar</p>
+            <p>Texto copiado libremente de la wikipedia</p>
+        </footer>
+    </body>
+</html>
