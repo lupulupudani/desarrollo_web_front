@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif, serif;
+    background-color: antiquewhite;
 }
 
 .container{
@@ -26,6 +27,7 @@ header h1 {
     box-shadow: .5rem .5rem .5rem .5rem dimgray;
     border-radius: 3rem;
     text-align: center;
+    background-color: rgb(206, 206, 206);
 }
 
 h2 {
@@ -41,13 +43,36 @@ nav ul li{
     text-align: center;
     border-radius: .5rem;
 }
-
 table{
-    background-color: rgb(221, 221, 221);
     border-collapse: collapse;
+}
+th{
+    background-color: rgb(221, 221, 221);   
+}
+caption{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem;
 }
 td, th{
     border: .1rem solid;
     padding: .7rem; 
+}
+
+figure{
+    margin: 0;
+    float: left;
+    padding: 0;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    width: 50%;
+}
+figure img{
+    width: 100%;
+    height: auto;
+    padding-bottom: .5rem;
+}
+figcaption{
+    text-align: center
 }
 
