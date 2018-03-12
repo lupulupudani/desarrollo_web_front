@@ -15,30 +15,32 @@
         <div class="container">
 
             <!--El elemento de HTML Header (<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones de encabezados, una formulario de búsqueda o cosas parecidas.-->
-            <header>
-                <h1>La ciudad de Almeria <img src="images/escudo.png" alt="Escudo de la provincia de Almeria" title="Escudo Almeriense"></h1>
-            </header>
+            <div class="head">
+                <header>
+                    <h1>Municipio de Almeria </h1>
+                </header>
 
-            <!--Crea un menu de navegacion-->
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Puerto</li>
-                    <li>Playas</li>
-                    <li>Fiestas</li>
-                    <li>Deportes</li>
-                    <li><a href="http://www3.aytoalmeria.es/db/www.nsf/home-www">Ayuntamiento</a></li>
-                    <li>Contacto</li>
-                </ul>
-            </nav>
-            <hr>
+                <!--Crea un menu de navegacion-->
+                <nav>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a class="hover" href="http://www.apalmeria.com/" target="black">Puerto</a></li>
+                        <li><a class="hover" href="https://www.google.es/destination/compare?q=almeria+playas&site=search&output=search&dest_mid=/m/0123s2&sa=X&ved=0ahUKEwjZo_676uTZAhUDkRQKHZe6BRMQ6tEBCD4oBDAA#trifp=cfs%3D%5Bnull,null,null,%5B%22/m/0b3yr%22%5D%0A%5D%0A" target="black">Playas</a></li>
+                        <li><a class="hover" href="https://es.wikipedia.org/wiki/Almer%C3%ADa#Fiestas_populares" target="black">Fiestas</a></li>
+                        <li><a class="hover" href="https://es.wikipedia.org/wiki/Almer%C3%ADa#Deportes" target="black">Deportes</a></li>
+                        <li><a class="hover" href="http://www3.aytoalmeria.es/db/www.nsf/home-www" target="black">Ayuntamiento</a></li>
+                        <li><a class="hover" href="http://www.aytoalmeria.es/www/estatico/oficinasper.asp" target="black">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Tabla del nucleo de población -->
             <table class="t1">
                 <caption>Núcleos de población y distancia en km a la capital del municipio</caption>
                 <tr>
                     <th scope="col">Nucleo</th>
                     <th scope="col">Población 2014</th>
                     <th scope="col">Población 2017</th>
-                    <th scope="col">Distancia (km)</th>
+                    <th scope="col">Distancias</th>
                     <th scope="col">Coordenadas</th>
                 </tr>
                 <tr>
@@ -84,24 +86,63 @@
                     <td>36°50′14″N 2°22′55″O</td>
                 </tr>
             </table>
-            <figure>
-                <video src="./video/v_almeria.mp4"></video>
-            </figure>
+            <aside>
+                <h2>Noticias</h2>
+                <ul>
+                    <li>
+                        <a href="http://www3.aytoalmeria.es/db/www.nsf/0/5C9DDEDE5DDC0F4EC1258247004DE70B">Los senderistas explorarán con el PMD las Minas de Castala</a>
+                    </li>
+                    <li>
+                        <a href="http://www3.aytoalmeria.es/db/www.nsf/0/CE10C743938FF53FC1258247004D31F6">La obra ‘Mujeres de la Chanca’ llega el martes al Teatro Apolo</a>
+                    </li>
+                    <li>
+                        <a href="http://www3.aytoalmeria.es/db/www.nsf/0/AED3F615D27173B4C125824B0061D06F">App ‘Almería Sostenible’ permitirá enviar incidencias de playas</a>
+                    </li>
+                    <li>
+                        <a href="http://www3.aytoalmeria.es/db/www.nsf/0/3410BC85191F411DC125824B0050E13C">Los Bomberos abren sus puertas San Juan de Dios</a>
+                    </li>
+                    <li>
+                        <a href="http://www3.aytoalmeria.es/db/www.nsf/noticias-www/C96B1BE616DE883BC125824B0050B93D?OpenDocument">Almería levantará el telón, Jornadas de Teatro del Siglo de Oro</a>
+                    </li>
+                    <li>
+                        <a href="http://www3.aytoalmeria.es/db/www.nsf/noticias-www/B1C5873CE32D8093C125824B00507E6D?OpenDocument">La Banda Sinfónica Municipal cierra este domingo el ciclo de conciertos matinales en el Apolo</a>
+                    </li>
+                </ul>
+            </aside>
             <!--El elemento HTML <main>  representa el contenido principal del <body> de un documento o aplicación. El área principal del contenido consiste en el contenido que está directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicación. Este contenido debe ser único al documento, excluyendo cualquier contenido que se repita a través de un conjunto de documentos como barras laterales, enlaces de navegación, información de derechos de autor, logos del sitio y formularios de búsqueda (a menos, claro, que la función principal del documento sea un formulario de búsqueda).-->
             <main>
                 <!--El Elemento article de HTML (<article>) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la sindicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido.-->
                 <article>
-                    <figure>
-                        <img src="./images/puerto_almeria.jpg" alt="Imagen del puerto de Almeria">
-                        <figcaption>Puerto de Almeria</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="./images/Almeria2.jpg" alt="La antigua Alcazaba de Almería">
-                        <figcaption>Alcazaba de Almería</figcaption>
-                    </figure>
+                    <div class="puerto">
+                        <figure>
+                            <img src="./images/puerto_almeria.jpg" alt="Imagen del puerto de Almeria">
+                            <figcaption><strong>Puerto de Almeria</strong></figcaption>
+                            <p class="primero">La Autoridad Portuaria de Almería presta un servicio importante a la industria auxiliar de la agricultura, tanto en importación
+                            de inputs como en exportación de productos terminados. También estudia con la comunidad portuaria, propiciar las condiciones
+                            que permitan exportar hortalizas por vía marítima. Estos sectores tienen gran parte de sus mercados fuera de nuestras fronteras
+                            y precisan adoptar modelos alternativos de transporte para acceder a nuevos destinos cada vez más lejanos.</p>
+                            <p>El Puerto de Almería está llevando a cabo actuaciones medioambientales para mejorar el control en la carga de graneles y
+                            la reducción de emisión de partículas en la manipulación de mercancías. También trata otros asuntos como las emisiones acústicas
+                            de los buques durante su estancia en puerto.</p>
+                        </figure>
+                        <figure>
+                            <img src="./images/Almeria2.jpg" alt="La antigua Alcazaba de Almería">
+                            <figcaption><strong>Alcazaba de Almería</strong></figcaption>
+                            <p class="primero">La Alcazaba y Murallas del Cerro de San Cristóbal de la ciudad española de Almería es uno de los conjuntos monumentales y
+                            arqueológicos árabes más importantes de la Península Ibérica. Sus casi mil años de historia nos ha permitido conocer la evolución
+                            experimentada en la arquitectura civil y militar durante la dominación árabe en Andalucía, debido a su construcción en diferentes
+                            fases y épocas, así como el origen y evolución de la ciudad.</p>
+                            <p>Situadas en un cerro aislado, la Alcazaba es una sólida y extensa fortaleza con murallas de más de tres metros de anchura
+                            y cinco de altura, formando un recinto cerrado sobre sí mismo, pero conectado con los lienzos de la Muralla que configuran
+                            y dan sentido a su propio desarrollo, dentro de una unidad más compleja, como es la fortificación de la ciudad, en el que
+                            el barranco de la Hoya y el cerro de San Cristóbal mantiene una conexión directa con la Alcazaba, tanto física como visual,
+                            creando un conjunto de extraordinaria magnitud.</p>
+                        </figure>
+                    </div>
+                    <div class="video">
+                        <video src="./video/v_almeria.mp4" controls></video>
+                    </div>
                     
-                    <p><strong>Almería</strong>, es un municipio español y una ciudad, capital del mismo y de la provincia homónima, que pertenecen a la comunidad autónoma de <a href="http://www.andalucia.org/es/">Andalucía</a>.</p>
-
                     <p>Es el centro neurálgico de la <strong>Comarca Metropolitana de Almería</strong>, en el extremo sureste de la Península Ibérica y de la comarca turística de Almería-Cabo de Gata-Níjar.</p>
                     <p>La rodean por el oeste la sierra de Gádor, por el norte Sierra Alhamilla y por el este el valle y delta del río Andarax y, más allá, una llanura que culmina en la sierra de Cabo de Gata. Al sur, su puerto y litoral se abren a una amplia bahía sobre el mar Mediterráneo</p>
                     <p>Fue fundada por Abderramán III en un emplazamiento dominado anteriormente por otras urbes como la ibera Urci o la romana Portus Magnus y desempeñó un papel fundamental durante el califato de Córdoba, llegando a ser el puerto más importante del <em>al-Ándalus omeya</em>. Alcanzó su máximo esplendor durante la taifa, en el siglo XI, convirtiéndose bajo el reinado de <q>Almotacín en un emporio comercial y cultural</q>.</p>
@@ -128,13 +169,7 @@
             </main>
 
             <!--El Elemento HTML Aside (<aside>) representa una sección de una página que consiste en contenido que está tangencialmente relacionado con el contenido que le rodea, que podría ser considerado independiente de ese contenido. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.-->
-            <aside>
-                <p>Noticias</p>
-                <ul>
-                    <li><a href="http://www3.aytoalmeria.es/db/www.nsf/0/5C9DDEDE5DDC0F4EC1258247004DE70B">Los senderistas explorarán con el PMD las Minas de Castala y Lavaderos de Segundo</a></li>
-                    <li><a href="http://www3.aytoalmeria.es/db/www.nsf/0/CE10C743938FF53FC1258247004D31F6">La obra ‘Mujeres de la Chanca’ llega mañana martes al Teatro Apolo</a></li>
-                </ul>
-            </aside>
+            
             <hr>
             <!--El Elemento HTML Footer (<footer>) representa un pie de página para el contenido de sección más cercano o el elemento  raíz de sección (p.e, su ancestro mas cercano <article>, <aside>, <nav>, <section>,<blockquote>, <body>, <details>, <fieldset>, <figure>, <td>). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.-->
             <footer>
