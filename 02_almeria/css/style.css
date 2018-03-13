@@ -67,7 +67,8 @@ table{
     border-collapse: collapse;
     display: inline-block;
     padding-top: 2rem;
-    padding-right: 1.5rem;   
+    padding-right: 1.5rem;
+    margin-bottom: 1rem;   
 }
 th{
     background-color: rgb(221, 221, 221);   
@@ -142,13 +143,13 @@ aside a:visited{
 /******** Video Almeria ********/
 .video{
     width: 100%;
-    height: 500px;
-    clear: left;
+    /* height: 500px; */
+    /* clear: left; */
     margin-bottom: 4rem;
     text-align: center;
 }
 video{
-    width: 60%;
+    width: 60%;  
 }
 /******** cards ********/
 .provincia{
