@@ -12,6 +12,11 @@ body {
     margin-right: auto;
     margin-bottom: 2rem;   
 }
+.puerto::after{
+    content: '';
+    display: block;
+    clear: both;
+}
 /******** Estilo header "Municipio de Almeria" ********/
 .head{
     background-image: url("..//images/almeria3.jpg");
@@ -86,7 +91,7 @@ td, th{
 .puerto figure{
     float: left;
     padding-bottom: 2rem;
-    width: 43%;
+    width: 45%;
 }
 .puerto figure img{
     width: 100%;
