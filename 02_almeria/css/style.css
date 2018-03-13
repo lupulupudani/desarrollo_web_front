@@ -104,12 +104,10 @@ figure>p.primero::first-letter{
 
 /******* aside Noticias ********/
 aside{
-    display: inline-block;
     border: 1px solid;
     padding: .5rem;
     width: 673px;
     margin-top: 3.5rem;
-    /* margin-right: 2rem; */
     margin-bottom: 1rem;
     margin-left: .5rem;
     height: 19rem;
