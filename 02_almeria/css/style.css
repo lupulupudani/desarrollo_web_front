@@ -83,23 +83,21 @@ td, th{
 }
 
 /******** Estilo aplicado imagenes ********/
-figure{
-    margin: 0;
+.puerto figure{
     float: left;
-    padding: 0;
-    padding-right: 2rem;
     padding-bottom: 2rem;
-    width: 50%;
+    width: 44%;
 }
-figure img{
+.puerto figure img{
     width: 100%;
     height: auto;
     padding-bottom: .5rem;
 }
+
 figure>p.primero::first-letter{
     font-size: 2rem;
 }
-figcaption{
+.puerto figcaption{
     text-align: center
 }
 
@@ -110,7 +108,7 @@ aside{
     padding: .5rem;
     width: 673px;
     margin-top: 3.5rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     margin-bottom: 1rem;
     margin-left: .5rem;
     height: 19rem;
@@ -134,6 +132,13 @@ aside a:link{
 aside a:visited{
     color: blue;
 }
+
+.content{
+    border: 1px solid;
+    margin: 1rem 0 1rem;
+    height: 10rem;
+    overflow: auto;
+}
 /******** Video Almeria ********/
 .video{
     width: 100%;
@@ -145,7 +150,29 @@ aside a:visited{
 video{
     width: 60%;
 }
-
+/******** cards ********/
+.provincia{
+    width: 100%;
+    margin-right:0;
+    margin-left: 0;
+}
+.ciudad{
+    display: inline-block;
+    margin: .3rem;
+    width: 19%;
+    height: 25rem;
+    padding-top: .5rem;
+}
+.provincia h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.ciudad img{
+    width: 100%;
+    margin-bottom: 1rem;
+    float: left;   
+}
 /******** footer ********/
 
 footer{
@@ -156,19 +183,3 @@ footer{
     background-color: #D2CFCA;
 }
 
-/* .ciudades{
-    width: 100%;
-    margin-right:0;
-    margin-left: 0;
-    padding-top: 1rem;
-}
-.ciudades::after{
-        content: '';
-        display: block;
-        clear: both;
-}
-.ciudades li{
-    width: 20%;
-    padding: 1rem;
-    float: left;
-} */
