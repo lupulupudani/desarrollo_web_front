@@ -1,0 +1,28 @@
+{
+  "name": "desarrollo_web_front",
+  "version": "1.0.0",
+  "description": "ejercicios del modulo front",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lupulupudani/desarrollo_web_front.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Learning"
+  ],
+  "author": "Daniel Lupu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lupulupudani/desarrollo_web_front/issues"
+  },
+  "homepage": "https://github.com/lupulupudani/desarrollo_web_front#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
