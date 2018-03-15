@@ -17,23 +17,27 @@ header{
 }
 .fondo{
     background-image: url("./images/Argentina.jpg");
-    display: inline-block;
+    position: absolute;
+    float: left;
     width: 800px;
     height: 300px;
     margin: 1rem;
-}
-figure{
-    float: left;
-    margin: .5rem;
-}
 
+}
 aside{
+    position: relative;
     float: right;
     width: 15rem;
     height: 10rem;
     background-color: dimgray;
     color: white;
 }
+figure{
+    float: left;
+    margin: .5rem;
+}
+
+
 .left, .right{
     width: 40%;
     float: left;
