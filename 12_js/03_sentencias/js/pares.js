@@ -74,7 +74,7 @@ function mostrarEsParCasos(n){
         break
         case -3:
         mensaje =`El numero ${n} es decimal`
-        break
+        
     }
     console.log(mensaje)
 }
