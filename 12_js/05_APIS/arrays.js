@@ -23,13 +23,14 @@ console.log(aLetras.length)
 
 //console.log(aLetras.join(''))
 //console.log(aLetras)
-//aLetrasOriginal = aLetras.slice(0, aLetras.length-1)
-//aLetras.sort()
-//console.log(aLetrasOriginal)
+aLetrasOriginal = aLetras.slice(0, aLetras.length)
+aLetras.sort()
+console.log(`sort`, aLetrasOriginal)
+aLetras.reverse()  //Mutable
+console.log(`Reverse`, aLetras)
 
 //Mutable
-//let aNuevo =
-let aNuevo = aLetras.splice(0, 3, "A", "B")
+let aNuevo = aLetras.splice(0, 9, "X", "Z")
 console.log(aNuevo)
 console.log(aLetras)
 
