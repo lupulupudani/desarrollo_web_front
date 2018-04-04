@@ -1,8 +1,8 @@
-$(document).ready(
+/* $(document).ready(
     function(){
 
     }
-)
+) */
 
 $(function(){
     let oDom ={
@@ -18,7 +18,7 @@ function saludar(){
 }
 function borrar (){
     oDom.eInputName.val('')
-    oDom.eOutSaludo.html()
+    oDom.eOutSaludo.html('')
 }
 oDom.eBottonSaludar.on('click', saludar)
 oDom.eBottonBorrar.on('click', borrar)
