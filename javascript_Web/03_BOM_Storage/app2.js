@@ -25,7 +25,6 @@
             eApellido.value = ''
 
         }
-
         function saludar() {
             let persona = localStorage.getItem('persona')
             persona = JSON.parse(persona)
@@ -33,10 +32,7 @@
                 eSaludo.innerHTML = `Hola ${persona.nombre} ${persona.apellido}`
             }
         }
-
         saludar()
     }
-
-
     window.addEventListener('load', app)
 })()
