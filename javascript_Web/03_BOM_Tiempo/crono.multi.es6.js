@@ -8,33 +8,32 @@ function main() {
     // Definición de la Función Constructora de la Pseudoclase Crono
 
     'use strict';
-    function Crono(posicion) {
-        this.t = 0;
-        this.posicion = posicion;
-
+    class Crono {
+        constructor(posicion) {
+            this.t = 0;
+            this.posicion = posicion;
+        }
+        
         // Se añade el método mostrar al prototipo 
-        Crono.prototype.mostrar = function () {
+        mostrar() {
             var oCrono = document.getElementById(this.posicion),
                 timeCrono = +oCrono.innerHTML + 0.1;
             oCrono.innerHTML = timeCrono.toFixed(1); // Convierte el número a string con 1 decimal
-        };
+        }; 
 
-        Crono.prototype.arrancar = function () { this.t = setInterval(this.mostrar.bind(this), 100); };
+        arrancar() { this.t = setInterval(this.mostrar.bind(this), 100); };
 
-        Crono.prototype.parar = function () { clearInterval(this.t); this.t = undefined; };
+        parar() { clearInterval(this.t); this.t = undefined; };
 
-        Crono.prototype.limpiarCrono = function () {
+        limpiarCrono() {
             document.getElementById(this.posicion).innerHTML = "0.0";
         };
 
-        Crono.prototype.cambiarCrono = function () {
+        cambiarCrono() {
             if (!this.t) { this.arrancar(); }
             else { this.parar(); }
-
         };
-
     }
-
 
     //**************************************************************
 
@@ -42,7 +41,8 @@ function main() {
     // correspondientes a los elementos definidos en HTML
 
     var oCrono1 = new Crono("crono1"),
-        oCrono2 = new Crono("crono2");
+        oCrono2 = new Crono("crono2"),
+        oCrono3 = new Crono("crono3");
 
     // Se definen como manejadores de los eventos
     // los métodos de los correspondientes objetos 
@@ -53,6 +53,9 @@ function main() {
 
     document.getElementById("btn_cambiar_2").onclick = function () { oCrono2.cambiarCrono(); };
     document.getElementById("btn_inicializar_2").onclick = function () { oCrono2.limpiarCrono(); };
+
+    document.getElementById("btn_cambiar_3").onclick = function () { oCrono3.cambiarCrono(); };
+    document.getElementById("btn_inicializar_3").onclick = function () { oCrono3.limpiarCrono(); };
 
 
 } //Fin de la función main()
