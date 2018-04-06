@@ -1,7 +1,7 @@
 function main() {
 
     function cambiaLista(nameItem) {
-        idItem = document.getElementById(nameItem);
+        let idItem = document.getElementById(nameItem);
         idItem.textContent = "Ops, no tengo " + nameItem;
         count++;
         if (count == 4) document.write("Lo siento, parece que estoy ilocalizable");
