@@ -51,7 +51,7 @@
             <fieldset id="academic" class="ocultar">    
                 <legend>Datos Academicos</legend>
                 <legend>Que turno quieres</legend>
-                <div radio-group>
+                <div class="radio-group">
                     <input type="radio" name="turno" id="mañana" value="mañana">
                     <label for="mañana">Mañana</label>
                     <input type="radio" name="turno" id="tarde" value="tarde">
@@ -60,12 +60,16 @@
                     <label for="mañana">Noche</label>
                 </div>
                 <div class="control-group">
-                    <label for="curso">Selecciona un curso</label>
+                    <label for="curso">Selecciona un curso:</label>
                     <select name="curso" id="curso">
                         <option value="front">Desarrollo Web</option>
                         <option value="web">Diseño Web</option>
                         <option value="node">Node JS</option>
                         <option value="sql">SQL</option>
+                    </select>
+                    <label for="asignaturas" class="cursos">Selecciona asignatura:</label>
+                    <select name="asignaturas" id="asignaturas" disabled="disabled">
+                        <option value="0"></option>
                     </select>
                 </div>
             </fieldset>
@@ -83,7 +87,7 @@
             </div>
             
         </form>
-        <div id="resultado" class="resentar">
+        <div id="resultado" class="presentar">
 
         </div>
     </main>
