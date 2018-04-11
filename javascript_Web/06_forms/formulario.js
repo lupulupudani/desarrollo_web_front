@@ -1,18 +1,17 @@
+
 export class Formulario {
     constructor() {
-
         this.datos = {
             nombre: '',
             apellido: '',
             email: '',
-            password: '',
+            passwd: '',
             datos: '',
             isOk: false,
             isOk2: false,
             turno: '',
             curso: {}
         }
-
         this.accederDom()
         this.definirManejadores()
     }
@@ -21,27 +20,25 @@ export class Formulario {
         this.domBtnSaludar = document.querySelector('#btnSaludar')
         this.domBtnEnviar = document.querySelector('#btnEnviar')
         this.domBtnBorrar = document.querySelector('#btnBorrar')
-
         this.domInpNombre = document.querySelector('#nombre')
         this.domInpApellido = document.querySelector('#apellido')
         this.domInpEmail = document.querySelector('#email')
-        this.domInpPassword = document.querySelector('#password')
-        
+        this.domInpPasswd = document.querySelector('#passwd')
         this.domAreaDatos = document.querySelector('#datos')
-        this.domRadioTurno = document.querySelectorAll("[name='turno']")
-        //this.domRadioTurno = document.getElementsByName('turno')
+        this.domRadioTurno = document.querySelectorAll('[name="turno"]')
+        // this.domRadioTurno = document.getElementsByName(turno)
         this.domCbxIsOk = document.querySelector('#isOk')
         this.domCbxIsOk2 = document.querySelector('#isOk2')
         this.domSelectCurso = document.querySelector('#curso')
-        this.domDivResultados = document.querySelector('#resultado')        
-        this.domFildAcademic = document.querySelector('#academic')
+        this.domDivResultados = document.querySelector('#resultados')
+        this.domFieldAcedemic = document.querySelector('#acedemic')
     }
 
     definirManejadores() {
         this.domBtnSaludar.addEventListener('click', this.saludar.bind(this))
         this.domBtnEnviar.addEventListener('click', this.enviar.bind(this))
         this.domBtnBorrar.addEventListener('click', this.borrar.bind(this))
-        this.domCbxIsOk.addEventListener('change', this.completar.bind(this))
+        this.domSelectCurso.addEventListener('change', this.cargarAsignaturas.bind(this))
     }
 
     saludar() {
@@ -53,14 +50,15 @@ export class Formulario {
         this.recogerDatos()
         this.presentarDatos()
     }
+
     borrar() {
     }
 
-    completar (){
-        //this.domFildAcademic.disabled = !this.domFildAcademic.disabled
-        this.domFildAcademic.classList.toggle('ocultar')
-        if (this.domFildAcademic.classList.contains('ocultar')){
-            this.domRadioTurno[0].checked =true
+    completar() {
+        this.domFieldAcedemic.disabled = !this.domFieldAcedemic.disabled
+        this.domFieldAcedemic.classList.toggle('ocultar')
+        if (this.domFieldAcedemic.classList.contains('ocultar')) {
+            this.domRadioTurno[0].checked = true
             this.domSelectCurso.selectedIndex = 0
         }
     }
@@ -69,13 +67,12 @@ export class Formulario {
         this.datos.nombre = this.domInpNombre.value
         this.datos.apellido = this.domInpApellido.value
         this.datos.email = this.domInpEmail.value
-        this.datos.password = this.domInpPassword.value
+        this.datos.passwd = this.domInpPasswd.value
         this.datos.datos = this.domAreaDatos.value
         this.datos.turno = this.procesarRadio(this.domRadioTurno)
         this.datos.isOk = this.domCbxIsOk.checked
         this.datos.isOk2 = this.domCbxIsOk2.checked
         this.datos.curso = this.procesarSelect(this.domSelectCurso)
-         
     }
 
     procesarRadio(nodo) {
@@ -85,39 +82,68 @@ export class Formulario {
                 value = item.value
             }
         })
-        return value //"mañana" "tarde" "noche"
+        return value //"mañana" "tarde"  "noche"
     }
 
-    procesarSelect (nodo){
+    procesarSelect(nodo) {
         let index = nodo.selectedIndex
         return {
             code: nodo.options[index].value,
             text: nodo.options[index].textContent
         }
-        
     }
 
-    presentarDatos(){
-        let resultadoHTML = 
-        `<h2>Resultados</h2>
+    presentarDatos() {
+        let resultadoHTML =
+            `<h2>Resultados</h2>
         <ul>
             <li>Nombre: ${this.datos.nombre}</li>
             <li>Apellido: ${this.datos.apellido}</li>
-            <li>Email: ${this.datos.email}</li>
-            <li>Password: ${this.datos.password}</li>
-            <li>Datos: ${this.datos.datos}</li>
+            <li>e-Mail: ${this.datos.email}</li>
+            <li>Contraseña: ${this.datos.passwd}</li>
+            <li>Datos extra: ${this.datos.datos}</li>
             <li>Aceptadas condiciones: ${this.datos.isOk ? 'Si' : 'No'}</li>
-            <li>Aceptadas condiciones2: ${this.datos.isOk2 ? 'Si' : 'No'}</li>
+            <li>Aceptadas condiciones 2 ${this.datos.isOk2 ? 'Si' : 'No'}</li>
             <li>Turno: ${this.datos.turno}</li>
             <li>Curso: ${this.datos.curso.text}</li>
-
+            
         </ul>
         `
-
         this.domDivResultados.innerHTML = resultadoHTML
+
     }
 
+    cargarAsignaturas() {
 
-    
+        let listaAsignaturas = {
+            front: ["html5", "css3", "Javascript", "JQuery"],
+            web: ["Dreamweaver", "Visual Studio Code", "Bloc Note"],
+            node: ["php", "hibernate", "spring", "Java"],
+            sql: ["sql"]
+        }
+
+        let cursos = document.getElementById('curso')
+        let asignaturas = document.getElementById('asignatura')
+        let cursoSeleccionado = cursos.value
+
+
+        asignaturas.innerHTML = '<option value="">Seleccione un Asignatura...</option>'
+
+        if (cursoSeleccionado !== '') {
+            
+            cursoSeleccionado = listaAsignaturas[cursoSeleccionado]
+            cursoSeleccionado.sort()
+
+            
+            cursoSeleccionado.forEach(function (asignatura) {
+                let opcion = document.createElement('option')
+                opcion.value = asignatura
+                opcion.text = asignatura
+                asignaturas.add(opcion)
+            });
+        }
+
+    }
+
 }
 
