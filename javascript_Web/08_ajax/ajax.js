@@ -29,8 +29,7 @@ function app() {
             } else {
                 return
             }
-        }
-        
+        }       
         conectar(metodo, url, null, stateChange)   
     }
 
@@ -43,7 +42,7 @@ function app() {
         } else {
             return
         }
-        conectar(metodo, url, null, stateChange)
+        conectar(metodo, url, null, mostrarDatos)
     } 
 
     function postDatos () {
@@ -70,32 +69,31 @@ function app() {
         conectar(metodo, url, JSON.stringify(data), stateChange)      
     }
 
-    function stateChange () {
-        console.log("Cambio de estado")
-        console.log(ajax.readyState)
-        if (ajax.readyState === 4) {
-            console.log("Comunicación OK")
-            if(ajax.status === 200) {
-                let response = JSON.parse(ajax.responseText)
-                console.dir(response)
-            } else {
-                console.log(ajax.status)
-                console.log(ajax.statusText)
-            }
-        }
-    }
+    function responder(){
+        let responder = JSON.parse(ajax.responseText)
+    } 
 
     function conectar(metodo, url, data, funcion) {
         ajax = new XMLHttpRequest()
-        ajax.onreadystatechange = funcion
-        ajax.headers = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
+        ajax.onreadystatechange = stateChange
         ajax.open(metodo, url)
-        console.log(data)
+        ajax.setRequestHeader('Content-Type', 'application/json')
+        ajax.setRequestHeader('Acept', 'application/json')       
         ajax.send(data)
 
+        function stateChange () {
+            console.log("Cambio de estado")
+            console.log(ajax.readyState)
+            if (ajax.readyState === 4) {
+                console.log("Comunicación OK")
+                if(ajax.status === 200) {
+                    funcion()
+                } else {
+                    console.log(ajax.status)
+                    console.log(ajax.statusText)
+                }
+            }
+        }
     }
 }
 window.addEventListener('load', app, false)

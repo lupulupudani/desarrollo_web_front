@@ -1,13 +1,50 @@
 {
-    "posts": [
-      { "id": 1, "title": "js_junior", "author": "Daniel" },
-      { "id": 2, "title": "ElSeñor", "author": "Daniel", "contenido": "sdklfn´gkdlang´sekrtgh" },
-      { "id": 3, "title": "js_junior", "author": "Daniel" },
-      { "id": 4, "title": "ElSeñor", "author": "Daniel", "contenido": "sdklfn´gkdlang´sekrtgh" }
-    ],
-    "comments": [
-      { "id": 1, "body": "un comentario", "postId": 1 },
-      { "id": 2, "body": "otro comentario", "postId": 2 }
-    ],
-    "profile": { "name": "typicode" }
+  "posts": [
+    {
+      "title": "Neuromante",
+      "author": "William Gibson",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "ElSeñor",
+      "author": "Daniel",
+      "contenido": "sdklfn´gkdlang´sekrtgh"
+    },
+    {
+      "id": 3,
+      "title": "js_junior",
+      "author": "Daniel"
+    },
+    {
+      "title": "El Señor de los Anillos",
+      "author": "JRR Tolkien",
+      "id": 5
+    },
+    {
+      "title": "El Señor de los Anillos",
+      "author": "JRR Tolkien",
+      "id": 6
+    },
+    {
+      "title": "El Señor de los Anillos",
+      "author": "JRR Tolkien",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "un comentario",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "otro comentario",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
