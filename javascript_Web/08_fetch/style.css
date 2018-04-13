@@ -8,18 +8,17 @@ body {
 main {
     min-height: 60vh;
 }
-h2 {
-    background: url(images/open.png) no-repeat 0 11px;
-    padding: 10px 0 0 25px;
-    cursor: pointer;
-}
-.answer {
-    margin-left: 25px;	
+main button{
+    color: maroon
 }
 
-.close {
-    background-image: url(images/close.png);
+main div {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
 }
-.ocultar {
-    display: none;
+
+main div.output {
+    border: 1px solid lightsteelblue;
+    width: 50%;
 }
