@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./form1.css">
+    <script src="./form_app1.js" type="module"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Datos del alumno</h1>
+    </header>
+    <main>
+        <form action="" method="get" id="form1" >
+            <fieldset class="contenedor">                
+                <fieldset class="identificacion">
+                    <legend><b>Identificación</b></legend>
+                    <div class="control-group">
+                        <label for="email">Escribe tu correo</label>
+                        <input type="email" name="email" id="email" placeholder="algo@algo.com" required autofocus>
+                    </div>
+                    <div class="control-group">
+                        <label for="passwd">Escribe tu contraseña</label>
+                        <input type="password" name="passwd" id="passwd" placeholder="Escribe tus contraseña" required>
+                    </div>
+                    <div class="control-group">
+                        <label for="passwd2">Escribe de nuevo la contraseña</label>
+                        <input type="password" name="passwd2" id="passwd2" placeholder="Escribe tus contraseña" required>
+                    </div><br/><br/><br/>
+                </fieldset>
+
+                <fieldset class="identificacion">
+                    <legend><b>Datos persomales</b></legend>
+                    <div class="control-group">
+                        <label for="nombre">Escribe tu nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" minlength="2" maxlength="20">
+                    </div>
+                    <div class="control-group">
+                        <label for="apellido">Escribe tu apellido</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Escribe tus apellido">
+                    </div>
+                    <div class="control-group">
+                            <label for="apellido2">Escribe tu segundo apellido</label>
+                            <input type="text" name="apellido2" id="apellido2" placeholder="Escribe tu segundo apellido">
+                        </div>
+                    <div class="control-group">
+                        <label for="fecha">Fecha de Nacimiento</label>
+                        <input type="date" name="fecha" id="fecha" placeholder="Fecha Nacimiento">
+                    </div><br/>
+                </fieldset>
+                <fieldset id="acedemic" class="identificacion">
+                    <legend><b>Curso</b></legend>
+                    <div class="control-group">
+                        <label for="curso">Selecciona un curso</label>
+                        <select name="curso" id="curso">
+                            <option value="">Seleccione un Curso...</option>
+                            <option value="front">Programador Web</option>
+                            <option value="web">Programador Sistemas</option>
+                            <option value="node">Programador Objetos</option>
+                            <option value="sql">Programador SQL</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="asignatura">Selecciona una Asignatura</label>
+                        <select name="asignatura" id="asignatura">
+                            <option value="">Seleccione una...</option>
+                        </select>
+                    </div>
+                </fieldset>
+                    <!-- <legend>Que turno quieres</legend>
+                    <div class="radio-group">
+                        <input type="radio" name="turno" id="mañana" value="mañana" checked>
+                        <label for="mañana">Mañana</label>
+                        <input type="radio" name="turno" id="tarde" value="tarde">
+                        <label for="tarde">Tarde</label>
+                        <input type="radio" name="turno" id="noche" value="noche">
+                        <label for="noche">Noche</label>
+                    </div> -->
+                    
+                    
+                
+                <fieldset class="identificacion">
+                    <legend>Aficiones</legend>
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk" id="isOk">
+                        <label for="isOk">Musica</label>
+                    </div>
+
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk2" id="isOk2">
+                        <label for="isOk2">Viajar</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk3" id="isOk3">
+                        <label for="isOk3">Pintura</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk4" id="isOk4">
+                        <label for="isOk4">Fotografia</label>
+                    </div> 
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk5" id="isOk5">
+                        <label for="isOk5">Cine</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk6" id="isOk6">
+                        <label for="isOk6">Deportes</label>
+                    </div>
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk7" id="isOk7">
+                        <label for="isOk7">Lectura</label>
+                    </div> 
+                    <div class="check-group">
+                        <input type="checkbox" name="isOk8" id="isOk8">
+                        <label for="isOk8">Baile</label>
+                    </div>      
+                </fieldset>
+
+                
+            </fieldset>
+            <div class="control-group">
+                <button type="submit" id="btnEnviar" class="btn-enviar">Enviar</button>
+                <button type="reset" id="btnBorrar" class="btn-enviar">Borrar</button>
+                <input type="hidden" name="state" value="0">
+            </div>
+        </form>
+        <div id="resultados" class="resultados">
+        </div>
+    </main>
+</body>
+
+</html>

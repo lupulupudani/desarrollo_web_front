@@ -12,7 +12,11 @@ function inicio() {
 	clave = document.getElementById("clave").value;
 	clave2 = document.getElementById("clave2").value;
 	formulario = document.getElementById("formulario").value;
-	mostrar = document.getElementById('parrafo_1')
+	mostrar1 = document.getElementById('parrafo_1')
+	fecha = document.getElementById('fecha').value
+	curso = document.getElementById('curso').value
+	asignatura = document.getElementById('asignatura')
+	aficion = document.getElementsByClassName('aficion')
 	expresion = false;
 
 }
@@ -23,6 +27,7 @@ function mostrar() {
 	this.validar();
 }
 
+ 
 function validar() {
 	if (clave != clave2) {
 		alert("No coinciden las contraseñas ")
@@ -31,6 +36,11 @@ function validar() {
 		this.expresion = true;
 		return mostrarFinal();
 	}
+}
+
+var fecha=new Date();
+function insertar () {
+	document.fecha.innerHTML = fecha;
 }
 
 function mostrarFinal() {
@@ -49,7 +59,11 @@ function mostrarFinal() {
 				<li>Segundo Apellido: ${this.apellidos2}</li>
 				<li>Email: ${this.email}</li>
 				<li>Usuario: ${this.usuario}</li>
-				<li>Tu clave: ${this.clave}</li>	
+				<li>Tu clave: ${this.clave}</li>
+				<li>Fecha de nacimiento: ${this.fecha}</li>
+				<li>Curso seleccionado: ${this.curso}</li>
+				<li>Asignatura: ${this.asignatura}</li>
+				<li>Aficion: ${this.aficion}</li>
 			</ul>
 			`)		
 		document.write("<br>" + "Fecha de registro:" + f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());

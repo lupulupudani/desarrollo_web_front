@@ -12,42 +12,112 @@
 	<body>
 		<h1>FORMULARIO DE CONTACTO</h1>
         <main class="contenedor">
-            <form action=" CONTACTO.php" CLASS="centro" name="formulario" id="formulario" method ="get" onsubmit="return comodin()" >
-                <h2 class="form__titulo">Crea una cuenta</h2>
-                <div class="contenedor-inputs">
-                    <div class="contacto">
-                        <label for="name">Introduzca su Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="15" minlength="5" required>
+            <form action=" CONTACTO.php" class="centro" name="formulario" id="formulario" method ="get" onsubmit="return comodin()" >
+                <h2 class="form__titulo">Datos del alumno</h2>
+                <fieldset class="identificacion">
+                    <legend><b>Identificación</b></legend>
+                    <div class="contenedor-inputs">
+                        <div class="contacto">
+                            <label for="name">Introduzca su Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="15" minlength="5" required>
+                        </div>
+                        <div class="contacto">
+                            <label for="apellidos">Introduzca su Apellido:</label>
+                            <input type="text" id="apellidos" name="apellido" placeholder="Apellido" maxlength="30" minlength="3" required>
+                        </div>
+                        <div class="contacto">
+                            <label for="name">Introduzca su segundo Apellido:</label>
+                            <input type="text" id="apellidos2" name="apellido2" placeholder="Segundo Apellido, opcional">
+                        </div>
+                        <div class="contacto">
+                            <label for="name">Introduzca Email:</label>
+                            <input type="email" id="email" name="email" placeholder="correo@correo.com" maxlength="30" minlength="4" required >
+                        </div>
+                        <div class="contacto">
+                            <label for="name">Introduzca Usuario:</label>
+                            <input type="text" id="usuario" name="usuario" placeholder="Usuario, minimo 3 caracteres" maxlength="15" minlength="4" required >
+                        </div>
+                        <div class="contacto">
+                            <label for="name">Introduzca una Clave:</label>
+                            <input type="password" id="clave" name="clave" placeholder="Clave" maxlength="12" minlength="2"  required>
+                        </div>
+                        <div class="contacto">
+                            <label for="name">Repite la Clave:</label>
+                            <input type="password" id="clave2" name="clave2" placeholder="Confirmación Clave" maxlength="12" minlength="2" required>
+                        </div>   
+                    </div> 
+                </fieldset>
+                <fieldset class="identificacion">
+                    <legend><b>Fecha de nacimiento</b></legend>
+                    <input type="date" name="fecha" id="fecha" placeholder="Fecha Nacimiento">
+                </fieldset>
+                <fieldset id="academic" class="identificacion">
+                    <legend><b>Curso</b></legend>
+                    <div class="control-group">
+                        <label for="curso">Selecciona un curso</label>
+                        <select name="curso" id="curso">
+                            <option value="">Seleccione un Curso...</option>
+                            <option value="Programador Web">Programador Web</option>
+                            <option value="Programador Sistemas">Programador Sistemas</option>
+                            <option value="Programador Objetos">Programador Objetos</option>
+                            <option value="Programador SQL">Programador SQL</option>
+                        </select>
                     </div>
-                    <div class="contacto">
-                        <label for="apellidos">Introduzca su Apellido:</label>
-                        <input type="text" id="apellidos" name="apellido" placeholder="Apellido" maxlength="30" minlength="3" required>
+                    <div class="control-group">
+                        <label for="asignatura">Selecciona una Asignatura</label>
+                        <select name="asignatura" id="asignatura">
+                            <option value="">Seleccione una...</option>
+                            <option value="HTML5">HTML5</option>
+                            <option value="CSS3">CSS3</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="PHP">PHP</option>
+                        </select>
                     </div>
-                    <div class="contacto">
-                        <label for="name">Introduzca su segundo Apellido:</label>
-                        <input type="text" id="apellidos2" name="apellido2" placeholder="Segundo Apellido, opcional">
+                </fieldset>
+                <fieldset class="identificacion">
+                    <legend>Aficiones</legend>
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="musica">Musica</label>
                     </div>
-                    <div class="contacto">
-                        <label for="name">Introduzca Email:</label>
-                        <input type="email" id="email" name="email" placeholder="correo@correo.com" maxlength="30" minlength="4" required >
+
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="viajar">Viajar</label>
                     </div>
-                    <div class="contacto">
-                        <label for="name">Introduzca Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" placeholder="Usuario, minimo 3 caracteres" maxlength="15" minlength="4" required >
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="pintura">Pintura</label>
                     </div>
-                    <div class="contacto">
-                        <label for="name">Introduzca una Clave:</label>
-                        <input type="password" id="clave" name="clave" placeholder="Clave" maxlength="12" minlength="2"  required>
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="fotografia">Fotografia</label>
+                    </div> 
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="cine">Cine</label>
                     </div>
-                    <div class="contacto">
-                        <label for="name">Repite la Clave:</label>
-                        <input type="password" id="clave2" name="clave2" placeholder="Confirmación Clave" maxlength="12" minlength="2" required>
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="deporte">Deportes</label>
                     </div>
-                    <input type="submit" id="boton" value="Registrar" class="btn-enviar" onclick="mostrar()" >
-                    <input type="reset" id="borrar" value="Borrar" class="btn-enviar">
-                   
-                </div>                
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="lectura">Lectura</label>
+                    </div> 
+                    <div class="check-group">
+                        <input type="checkbox" name="aficion">
+                        <label for="baile">Baile</label>
+                    </div>      
+                </fieldset>
+                <fildsetclass="identificacion">
+                    <legend>Fecha de hoy</legend>
+                    <div id="fechaHoy"></div>
+                </fildset>
+                               
             </form>
+            <input type="submit" id="boton" value="Registrar" class="btn-enviar" onclick="mostrar()" >
+            <input type="reset" id="borrar" value="Borrar" class="btn-enviar">
         </main>    
 	            
         <div class ="centro">    

@@ -1,0 +1,48 @@
+*, *::before, *::after, *:before, *:after { 
+    box-sizing : border-box;
+    }
+body {
+    background-color: bisque;
+    margin: 2rem;
+}
+.check-group{
+    display: inline;
+    padding: 0.7rem;
+}
+
+.control-group {
+    padding: 0.4rem;
+}
+.control-group label {
+    display: inline-block;
+    width: 20%;
+    min-width: 10rem;
+}
+.identificacion{
+    display: inline-block;
+    width: 40%
+}
+.contenedor{
+    width: 70%;
+    
+}
+.control-group input:not([type="button"]) {
+    width: 20%;
+    min-width: 10rem;
+}
+
+
+input:invalid {
+    border: 1px solid red;
+}
+  
+input:valid {
+    border: 1px solid rgb(19, 49, 66);
+}
+.btn-enviar{
+    margin-bottom: 40px;
+    color: blue;
+    margin-top: 2rem;
+    height: 2rem;
+    width: 5rem;
+}
