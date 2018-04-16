@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Formulario de Registro</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="javascript">
+    <script src="validar.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+ 
+    <h1>Formulario De Contacto</h1>
+
+    <form action=" contacto.php" name="formulario" id="formulario" method="get" onsubmit="return comodin()">
+        <h2 class="titulo">Crea una cuenta</h2>
+        <div class="inputs">
+            <label for="name">Nombre:</label>
+            <br>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="15" minlength="5" required>
+            </br>
+            <label for="apellidos">Apellido:</label>
+            <br>
+                <input type="text" id="apellidos" name="apellido" placeholder="Apellido" maxlength="30" minlength="2" required>
+            </br>
+            <label for="name">Apellido 2:</label>
+            <br>
+                <input type="text" id="apellidos2" name="apellido2" placeholder="Apellido 2">
+            </br>
+            <label for="name">Email:</label>
+            <br>
+                <input type="email" id="email" name="email" placeholder="Email" maxlength="30" minlength="4" required>
+            </br>
+            <label for="name">Usuario:</label>
+            <br>
+                <input type="text" id="usuario" name="usuario" placeholder="Usuario" maxlength="15" minlength="4" required>
+            </br>
+            <label for="name">Clave:</label>
+            <br>
+                <input type="password" id="clave" name="clave" placeholder="Clave" maxlength="15" minlength="6" required>
+            </br>
+            <label for="name">Validar clave:</label>
+            <br>
+                <input type="password" id="clave2" name="clave2" placeholder="Clave" maxlength="15" minlength="6" required>
+
+            <input type="submit" id="boton" value="Registrar" class="btn-enviar" onclick="mostrar()">
+
+        </div>
+    </form>
+
+    <div id="resultado">
+        <h2>Los datos del usuario son los siguientes</h2>
+        <ul id="parrafo_1"> </ul>
+    </div>
+    </article>
+    <footer>
+        <div>
+            <small>
+                <p>Todos los campos son obligatorios salvo el Apellidos 2 que puede dejarlo vacio. Las claves tienen que ser
+                    identicas.</p>
+                    <p>Al finalizar el devolvera los datos registrados y la FECHA</p>
+                    <br>
+                    <p>Daniel Lupu</p>
+            </small>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./form1.css">
+    <script src="app1.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Fornumario de Contacto</h1>
+    </header>
+    <main>
+        <form action="" method="GET">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div class="control-group">
+                    <label for="usuario">Introduzca nombre de usuario:</label>
+                    <input type="text" name="usuario" id="usuario" placeholder=" Usuario, minimo 3 caracteres" maxlength="30" minlength="3" autofocus >
+                </div>
+                <div class="control-group">
+                    <label for="nombre">Escribe tu nombre</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="20" minlength="3">
+                </div>
+                <div class="control-group">
+                    <label for="apellido">Escribe tu apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Escribe tus apellidos">
+                </div>
+                <div class="control-group">
+                    <label for="email">Escribe tu correo</label>
+                    <input type="email" name="email" id="email" placeholder="Escribe tus correo">
+                </div>
+                <div class="control-group">
+                    <label for="passwd">Escribe tu contraseña</label>
+                    <input type="password" name="passwd" id="passwd" placeholder="Escribe tus contraseña">
+                </div>
+            </fieldset>
+            <div class="control-group">
+                <button type="submit" id="btnEnviar">Enviar</button>
+                <button type="reset" id="btnBorrar">Borrar</button>                
+            </div>
+        </form>
+        <div id="resultados" class="resultados">
+        </div>
+    </main>
+</body>
+
+</html>
