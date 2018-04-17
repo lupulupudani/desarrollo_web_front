@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head> 
+        <title>Formulario de Registro</title>
+		<meta charset="utf-8">
+        <meta name="keywords" content="javascript">
+        <script src="validar.js"></script>
+        <link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body onload="cargarCursos()">
+		<h1>FORMULARIO DE CONTACTO</h1>
+        <main class="contenedor">
+            <form action=" CONTACTO.php" CLASS="centro" name="formulario" id="formulario" method ="get" onsubmit="return comodin()" >
+                <h2 class="form__titulo">Crea una cuenta</h2>
+                <div class="contenedor-inputs">
+                    <div class="contacto">
+                        <label for="name">Introduzca su Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="15" minlength="5" required>
+                    </div>
+                    <div class="contacto">
+                        <label for="apellidos">Introduzca su Apellido:</label>
+                        <input type="text" id="apellidos" name="apellido" placeholder="Apellido" maxlength="30" minlength="3" required>
+                    </div>
+                    <div class="contacto">
+                        <label for="name">Introduzca su segundo Apellido:</label>
+                        <input type="text" id="apellidos2" name="apellido2" placeholder="Segundo Apellido, opcional">
+                    </div>
+                    <div class="contacto">
+                        <label for="name">Introduzca Email:</label>
+                        <input type="email" id="email" name="email" placeholder="correo@correo.com" maxlength="30" minlength="4" required >
+                    </div>
+                    <div class="contacto">
+                        <label for="name">Introduzca Usuario:</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="Usuario, minimo 3 caracteres" maxlength="15" minlength="4" required >
+                    </div>
+                    <div class="contacto">
+                        <label for="name">Introduzca una Clave:</label>
+                        <input type="password" id="clave" name="clave" placeholder="Clave" maxlength="12" minlength="2"  required>
+                    </div>
+                    <div class="contacto">
+                        <label for="name">Repite la Clave:</label>
+                        <input type="password" id="clave2" name="clave2" placeholder="Confirmación Clave" maxlength="12" minlength="2" required>
+                    </div>
+                    <div class="contacto">
+                        <select name="curso" id="curso" onchange="cargarAsignaturas()">
+                            <option value="cargarCursos()">Seleccione un Curso</option>
+                        </select>
+                        <select name="asignatura" id="asignatura">
+                            <option value="cargarAsignaturas()">Seleccione primero un curso</option>
+                        </select>
+                    </div>
+                    
+                    <input type="submit" id="boton" value="Registrar" class="btn-enviar" onclick="mostrar()" >
+                    <input type="reset" id="borrar" value="Borrar" class="btn-enviar">
+                   
+                </div>                
+            </form>
+        </main>    
+	            
+        <div class ="centro">    
+            <b>Todos los campos son obligatorios salvo el segundo Apellido. Las claves tienen que ser identicas.</b>
+            <div id="resultado">
+                			
+                <ul id="parrafo_1"> </ul>
+            </div>        
+        </div>
+        <footer>
+            <address>&copy; Daniel Lupu - Tajamar</address>
+            <small>Todos los derechos reservados!</small>
+        </footer>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+*, *::before, *::after, *:before, *:after { 
+    box-sizing : border-box;
+    }
+body {
+    background-color: bisque;
+    margin: 2rem;
+}
+h1{
+    text-align: center;
+}
+
+
+.contacto label {
+    display: inline-block;
+    width: 20%;
+    min-width: 10rem;
+}
+form{
+
+   border:3px solid #D2CFCA;
+   margin: 50px 50px 50px 50px
+}
+.contacto {
+    padding: 0.5rem;
+}
+.centro {
+    text-align: center;
+}
+
+.contacto input{
+    border: 1px solid black;
+    height: 1.5rem;
+    width: 30%;
+}
+.btn-enviar{
+    margin-bottom: 40px;
+    color: blue;
+    margin-top: 2rem;
+    height: 2rem;
+    width: 5rem;
+}
+
+
+footer{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 2rem 0rem;
+    text-align: center;
+    background-color: #D2CFCA;
+}
