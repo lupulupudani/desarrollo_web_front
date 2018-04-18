@@ -1,0 +1,59 @@
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.header, .footer{
+    min-height: 6rem;
+    background-color: brown;
+    color: palegoldenrod;
+    padding: 1rem;
+    text-align: center;
+}
+.main{
+    overflow: auto;
+    min-height: 60vh;
+}
+
+/*Damos estilo a la sección Libros*/
+.columnas_2{
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+}
+.columnas_2 p:nth-of-type(1){
+    margin-top: 0px;
+}
+
+/*Damos estilo a la sección Peliculas*/
+.tabla{
+    display: table;
+    width: 100%;
+    background-color: bisque;
+}
+.fila{
+    display: table-row;
+    width: 100%
+}
+.columna{
+    display: table-cell;
+    width: 50%;
+    padding: 2rem;
+}
+
+/*Damos estilo al aside*/
+.lado{
+    float: left;
+    padding: 3rem;
+}
+.lad_izda, .lad_der{
+    float: left;
+
+}
+.lad_izda{
+    width: 80%;
+}
+.lad_der{
+    width: 20%
+}
