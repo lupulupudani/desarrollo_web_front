@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="basic.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <header class="col">
+                <h1>Probando Bootstrap</h1>
+            </header>
+        </div>
+        <div class="row alto_fijo justify-content-between">
+            <article class="col-3 align-self-start order-2">
+                <p>Primero Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sequi esse, fuga atque quisquam dicta soluta
+                    nulla eligendi perferendis enim quod saepe culpa. Non dolore debitis obcaecati soluta sint totam.</p>
+                    <img class="img-fluid" src="http://via.placeholder.com/350x150" alt="">
+            </article>
+            <article class="col-3 align-self-center order-3">
+                <p>Segundo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sequi esse, fuga atque quisquam dicta soluta
+                    nulla eligendi perferendis enim quod saepe culpa. Non dolore debitis obcaecati soluta sint totam. Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit. Cum sequi esse, fuga atque quisquam dicta soluta
+                    nulla eligendi perferendis enim quod saepe culpa. Non dolore debitis obcaecati soluta sint totam.</p>
+            </article>
+            <article class="col-3 align-self-end order-1">
+                <p>Tercero Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sequi esse, fuga atque quisquam dicta soluta
+                    nulla eligendi perferendis enim quod saepe culpa. Non dolore debitis obcaecati soluta sint totam. Lorem
+                    ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+        </div>
+        <div class="row">
+            <form action="" class="col-8">
+                <div class="row">
+                    <div class="form-group col-4">
+                        <label for="name">Nombre</label>
+                        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="apell">Apellido</label>
+                        <input type="text" class="form-control" name="apell" id="apell" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                    <button type="button" class="btn btn-secondary">Grabar</button>
+                    <button type="button" class="btn btn-success">Borrar</button>
+                </div> 
+            </form>    
+        </div>  
+        <div class="col-6 mt-3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis nemo tempora! Ducimus deleniti minus
+                debitis delectus labore quisquam, pariatur possimus unde. Fugiat quaerat quas ut saepe praesentium esse
+                laborum?</p>
+            <p>Maiores sequi, vero libero labore dolorum eveniet quidem, tenetur incidunt voluptatibus doloribus consectetur.
+                Iure illo accusantium illum repudiandae, aspernatur, consequatur praesentium aut veritatis nesciunt voluptatem,
+                quam sapiente obcaecati ab doloribus!</p>
+            <p>Quam tenetur neque maxime culpa deserunt doloremque, inventore hic impedit odio harum sapiente voluptas eveniet
+                cum ad, voluptate aspernatur quae ducimus eos ipsum obcaecati ipsa? Illo facere voluptates itaque cum!</p>
+        </div>
+        <table class="table table-striped col-6">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
