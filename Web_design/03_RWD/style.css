@@ -42,12 +42,11 @@ body{
 }
 
 nav a:link, a:visited{
-    margin: .5rem;
-    padding: 1rem 1rem;
+    margin: .3rem;
+    padding: 1rem .7rem;
     background-color: #D2CFCA;
     text-align: center;
     border-radius: .5rem;
-    display: inline-block;
     text-decoration: none;
     color: black;
 }
@@ -79,6 +78,12 @@ li {
 
 .imagen{
     width: 100%;
+}
+
+/* Estilos de los link de noticias */
+a.link_noticias{
+    text-decoration: none;
+    color: blue
 }
 
 /* Aqui empiezan los estilo para los dispositivos mobiles */
