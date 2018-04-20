@@ -1,17 +1,23 @@
-*{
-    box-sizing: border-box;
+/* reset */
+* { 
+box-sizing : border-box;
 }
+/*Color de fondo*/
+body{
+    background-color: gainsboro
+}
+
 .container{
-    width: 96%;
-    /* min-width: 360px; */
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid;
+    background-color: aliceblue
 }
+/*Estilo para la cabecera y el footer*/
 .header, .footer{
     min-height: 3rem;
     background-color: brown;
-    color: palegoldenrod;
+    color: white;
     padding: 2rem;
     margin-top: 2rem;
     text-align: center;
@@ -19,11 +25,35 @@
     justify-content: center;
     align-items: center;
 }
+.header{
+    background-image: url('./images/estanteria.jpg');
+}
 
 .header h1{
-    font-size: 1.5rem;
+    font-size: 3rem;
     width: 10%;
     flex: 12 1 auto;
+}
+
+/******** Menu de navegacion superior ********/
+.hover:hover{
+    color: #D2CFCA;
+    background-color: #AA997E
+}
+
+nav a:link, a:visited{
+    margin: .5rem;
+    padding: 1rem 1rem;
+    background-color: #D2CFCA;
+    text-align: center;
+    border-radius: .5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+li {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .nav_icon{
@@ -39,6 +69,7 @@
     display: none;
 }
 
+/*Imagenes de los articulos*/
 .img_wrapper{
     width: 98%;
     margin-right: auto;
@@ -50,16 +81,14 @@
     width: 100%;
 }
 
+/* Aqui empiezan los estilo para los dispositivos mobiles */
 /*
 -Imagenes float y al 50%
 -Menu superior visible*/
-@media screen and (min-width: 640px){
+@media screen and (min-width: 480px){
     .img_wrapper{
-        width: 49%;
-        margin-right: 2rem;
-        margin-left: 2rem;
+        width: 98%;
         float: left;
-    
     }
     .nav_icon{
         display: none;
@@ -71,7 +100,8 @@
         display: none;
     }
 }
-@media screen and (min-width: 900px){
+/* Aqui empiezan los estilo para los dispositivos tablet */
+@media screen and (min-width: 768px){
     .main{
         display: flex;
     }
@@ -86,14 +116,14 @@
         padding-left: 2rem; 
     }
 }
-
-@media screen and (min-width: 1100px){
+/* Aqui empiezan los estilo para los dispositivos desctop */
+@media screen and (min-width: 1024px){
     .section_wrapper{
         display: flex;
-
+    
     }
     .section{
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
